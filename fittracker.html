@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Nicholas Brandis Portfolio Website</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />  
+        
+        <!-- Update these with your own fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap" rel="stylesheet">
+        
+        <link rel="stylesheet" href="css/style.css">
+
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                <img src="" alt="j">
+            </div>
+            <button class="nav-toggle" aria-label="toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
+                    <li class="nav__item"><a href="index.html#about" class="nav__link">About Me</a></li>
+                    <li class="nav__item"><a href="index.html#work" class="nav__link">Work</a></li>
+                    <!-- <li class="nav__item"><a href="index.html#other" class="nav__link">Other</a></li> -->
+                </ul>
+            </nav>
+        </header>
+        
+        <section class="intro">
+            <h1 class="section__title section__title--intro">
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspFit Tracker
+            </h1>
+            <p class="section__subtitle section__subtitle--intro"></p>
+            <img src="img/portfolio-01.jpg" alt="" class="intro__img">
+        </section>
+        
+        <div class="portfolio-item-individual">
+            <p>
+                For our CS35L final project, my group decided to create a fitness tracker web application. The app allows users to log 
+                workout information and visit old workouts, as well as observe progress over time and copy the structure of previous 
+                workouts. Our motivation was that we all enjoy working out, but none of us had anything to use to keep track of our 
+                workouts each day. FitTracker is an attempt to solve this issue.
+            </p>
+            <img src="http://drive.google.com/uc?export=view&id=1Oe7mLj6ylvQ-RsotMmDRYqmqbE9elZju" alt="">
+            <p class="fittracker-caption">
+                A screenshot of a "Workout" page of Fit Tracker.
+            </p>
+            <p>
+                To implement this app, we utilized React for the frontend and Node and Firebase for the backend. For 
+                the login page, we used React’s Google login feature to allow users to sign in with an existing Google 
+                account. We used Material UI to design the components of the front end, such as the exercise cards and 
+                the navigation bar. To route between different pages in the app (i.e. login, workout, and history), we 
+                used React Router. Then for the backend, we saved user data into the Google Firebase realtime 
+                database. To communicate between the frontend and backend, we use Axios for HTTP get requests that 
+                would request data at a specific URL from the Node server.
+            </p>
+            <p>
+                If you wish to download the project and run it for yourself, you can click the "Project Download" link below to download the
+                code. From there, ensure you have the node and npm modules installed on your computer. Once you do, open the '35lfitttracker'
+                folder on the command line and cd into the 'src' directory. Then, run 'node server.mjs' to start up the Node server. Finally,
+                open a new terminal session, and in the same 'src' directory, run the command 'npm start'. This should open up the React
+                application in your browser, and you should be able to play with the app yourself.
+            </p>
+            <p>
+                Here you can find links to the presentation slides, the project report, and a link to download the code:
+            </p>
+            <ul class="links-list">
+                <li><a class="pdf-link" target="_blank" href="https://docs.google.com/presentation/d/1-N9brBH7pIVRQs1JfKjGkAtMYx68YCt7VufrGU2h6X0/edit?usp=sharing">
+                    Presentation</a></li>
+                <li><a class="pdf-link" target="_blank" href="https://drive.google.com/file/d/1IdVzGt2CvCZGmlcvzHh6dUyNS4K9jnBg/view?usp=sharing">
+                    Report</a></li>
+                <li><a class="pdf-link" target="_blank" href="">
+                    Project Download</a></li>
+            </ul>
+        </div>
+        
+        
+        <!-- Footer -->
+        <footer class="footer">
+            <!-- replace with your own email address -->
+            <a href="mailto:niklbrandis@gmail.com" class="footer__link">niklbrandis@gmail.com</a>
+            <ul class="social-list">
+                <li class="social-list__item">
+                    <a class="social-list__link" href="https://www.linkedin.com/in/nick-brandis-74518a1b9/" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </li>
+                <li class="social-list__item">
+                    <a class="social-list__link" href="https://github.com/nbrandis22" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </li>
+                <li class="social-list__item">
+                    <a class="social-list__link" href="https://www.youtube.com/channel/UClvTBnLSkwy5pjo7S76ep8g" target="_blank">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </li>
+            </ul>
+        </footer>
+        
+        
+        <script src="js/index.js"></script>
+        
+    </body>
+</html>

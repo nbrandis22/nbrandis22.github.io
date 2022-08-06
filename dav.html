@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Nicholas Brandis Portfolio Website</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />  
+        
+        <!-- Update these with your own fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap" rel="stylesheet">
+        
+        <link rel="stylesheet" href="css/style.css">
+
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                <img src="" alt="j">
+            </div>
+            <button class="nav-toggle" aria-label="toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
+                    <li class="nav__item"><a href="index.html#about" class="nav__link">About Me</a></li>
+                    <li class="nav__item"><a href="index.html#work" class="nav__link">Work</a></li>
+                    <!-- <li class="nav__item"><a href="index.html#other" class="nav__link">Other</a></li> -->
+                </ul>
+            </nav>
+        </header>
+        
+        <section class="intro">
+            <h1 class="section__title section__title--intro">
+                Digital Audio Visualizer
+            </h1>
+            <p class="section__subtitle section__subtitle--intro"></p>
+            <img src="img/portfolio-01.jpg" alt="" class="intro__img">
+        </section>
+        
+        <div class="portfolio-item-individual">
+            <p>During my second year at UCLA, I decided to participate in another IEEE project called Digital Audio Visualizer (DAV). Throughout
+                the year, we learned the basics of SystemVerilog and how to program a DE-10 Max Lite FPGA. Some of the projects we did included
+                a calculator (using switches and 7-segment display), a piano (using switches and a buzzer), and Flappy Bird (using buttons and 
+                a VGA).
+            </p>
+            <div class="video-wrap">
+                <iframe class="video"
+                    src="https://www.youtube.com/embed/YDqHrvdhuY4">
+                </iframe>
+            </div>
+            <p>
+                The big project at the end of the year was the Digital Audio Visualizer itself. The goal was to design three modules: a 
+                digital mic translator to buffer data detected from the digital mic, a FFT module to convert discrete time data to discrete
+                frequency data, and a VGA module to display bars for the frequency data.
+            </p>
+            <p>
+                We chose to design a 32-point FFT, meaning we took 32 points in the time domain (sampled from the digital mic) and converted 
+                them into 32 points in the frequency domain. To do this, we implemented an FFT, where points are multiplied by each other and 
+                complex "twiddle factors" in five stages, to approximate integrating the time domain signal multiplied by a complex exponential 
+                across all time. We also designed the butterfly module to compute the outputs for a given butterfly unit given the inputs and the 
+                twiddle factor.
+            </p>
+            <p>
+                The VGA module was relatively simple. Essentially, we multiplied the positive outputs of the FFT by a scaling factor (a higher FFT output
+                should result in a higher bar on the VGA, but must be scaled) and clocked those values in registers. The next VGA clock cycle, the 
+                VGA would color a specific pixel blue if the y-coordinate for the current bin was within the previously computed value stored
+                in a register. This would result in 32 bins, which is what you can see in the video below.
+            </p>
+            <div class="video-wrap">
+                <iframe class="video"
+                    src="https://www.youtube.com/embed/C-eHJ0lBcl0">
+                </iframe>
+            </div>
+            <p>
+                The DAV shows frequency output, where lower measured frequencies are on the edges of the display, and higher frequencies are 
+                in the middle. Our DAV was voted "Best DAV" by IEEE members.
+            </p>
+        </div>
+        
+        
+        <!-- Footer -->
+        <footer class="footer">
+            <!-- replace with your own email address -->
+            <a href="mailto:niklbrandis@gmail.com" class="footer__link">niklbrandis@gmail.com</a>
+            <ul class="social-list">
+                <li class="social-list__item">
+                    <a class="social-list__link" href="https://www.linkedin.com/in/nick-brandis-74518a1b9/" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </li>
+                <li class="social-list__item">
+                    <a class="social-list__link" href="https://github.com/nbrandis22" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </li>
+                <li class="social-list__item">
+                    <a class="social-list__link" href="https://www.youtube.com/channel/UClvTBnLSkwy5pjo7S76ep8g" target="_blank">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </li>
+            </ul>
+        </footer>
+        
+        
+        <script src="js/index.js"></script>
+        
+    </body>
+</html>

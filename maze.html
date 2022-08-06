@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Nicholas Brandis Portfolio Website</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />  
+        
+        <!-- Update these with your own fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap" rel="stylesheet">
+        
+        <link rel="stylesheet" href="css/style.css">
+
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                <img src="" alt="j">
+            </div>
+            <button class="nav-toggle" aria-label="toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
+                    <li class="nav__item"><a href="index.html#about" class="nav__link">About Me</a></li>
+                    <li class="nav__item"><a href="index.html#work" class="nav__link">Work</a></li>
+                    <!-- <li class="nav__item"><a href="index.html#other" class="nav__link">Other</a></li> -->
+                </ul>
+            </nav>
+        </header>
+        
+        <section class="intro">
+            <h1 class="section__title section__title--intro">
+                Internet of Things: The Maze
+            </h1>
+            <p class="section__subtitle section__subtitle--intro"></p>
+            <img src="img/portfolio-01.jpg" alt="" class="intro__img">
+        </section>
+        
+        <div class="portfolio-item-individual">
+            <p>ENGR 96C is a class at UCLA that utilizes the STMicroelectronics Sensortile device, equipped with several instruments including
+                an accelerometer and gyroscope, to teach students about machine learning and internet of things technology. The majority of the 
+                quarter is spent completing tutorials that taught me how to use the device and write code to change how it operates. 
+            </p>
+            <p>
+                For the final project, however, we were given more freedom on what we wanted to do. I chose to design a maze that the player 
+                can navigate through by designating their own motions. 
+                You can see a video demonstration of my project below.
+            </p>
+            <div class="video-wrap">
+                <iframe class="video"
+                    src="https://www.youtube.com/embed/xCaAjbr_9s4">
+                </iframe>
+            </div>
+            <p>
+                In the video, I begin by training the device to recognize six distinct two-part motions. Then the device randomly assigns weights to input 
+                neurons and begins calculating outputs. These outputs are compared to the ground truth values from the beginning and the 
+                weights are adjusted accordingly. After a few seconds of training, the system is ready for the game to be played. 
+            </p>
+            <p>
+                Once the 
+                player has decided which room they wish to enter, they execute the double tap command, and complete their two part motion to 
+                choose their room. The numbering of motions goes from left to right, so for example, in Room 1, if the player wished to enter 
+                Room 3 (which is displayed as the left-most room), they would execute the first motion they trained. The player can explore 
+                the maze for as long as they wish, assuming they never reach one of the game-ending rooms.
+            </p>
+            <!-- <iframe src='https://view.officeapps.live.com/op/embed.aspx?src=[https://www.your_website/file_name.pptx]' width='100%' height='600px' frameborder='0'></iframe> -->
+        </div>
+        
+        
+        <!-- Footer -->
+        <footer class="footer">
+            <!-- replace with your own email address -->
+            <a href="mailto:niklbrandis@gmail.com" class="footer__link">niklbrandis@gmail.com</a>
+            <ul class="social-list">
+                <li class="social-list__item">
+                    <a class="social-list__link" href="https://www.linkedin.com/in/nick-brandis-74518a1b9/" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </li>
+                <li class="social-list__item">
+                    <a class="social-list__link" href="https://github.com/nbrandis22" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </li>
+                <li class="social-list__item">
+                    <a class="social-list__link" href="https://www.youtube.com/channel/UClvTBnLSkwy5pjo7S76ep8g" target="_blank">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </li>
+            </ul>
+        </footer>
+        
+        
+        <script src="js/index.js"></script>
+        
+    </body>
+</html>
