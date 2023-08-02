@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Nicholas Brandis Portfolio Website</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />  
+        
+        <!-- Update these with your own fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap" rel="stylesheet">
+        
+        <link rel="stylesheet" href="css/style.css">
+
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                <img src="" alt="j">
+            </div>
+            <button class="nav-toggle" aria-label="toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
+                    <li class="nav__item"><a href="index.html#about" class="nav__link">About Me</a></li>
+                    <li class="nav__item"><a href="index.html#work" class="nav__link">Work</a></li>
+                    <!-- <li class="nav__item"><a href="index.html#other" class="nav__link">Other</a></li> -->
+                </ul>
+            </nav>
+        </header>
+        
+        <section class="intro">
+            <h1 class="section__title section__title--intro">
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspQuill
+            </h1>
+            <p class="section__subtitle section__subtitle--intro"></p>
+            <img src="img/portfolio-01.jpg" alt="" class="intro__img">
+        </section>
+        
+        <div class="portfolio-item-individual">
+            <p>
+                Around the time when the ChatGPT 3.5 API was released, my friends and I recognized the potential and tried to hop on the 
+                bandwagon before it took off. One issue I thought could be solved with the new tech is the problem of being confused when
+                reading something online. In our experiences, it is very common to be reading a news or tech article and be confused about 
+                a certain word, phrase, or paragraph. And the best solution at the time was to open a new tab in Google or ChatGPT and do the research yourself. 
+            </p>
+            <p>
+                So, imagine all of this done for you, and all you have to do is highlight something you're confused about and let AI do 
+                the rest.
+            </p>
+            <p>    
+                Quill is a Chrome extension that integrates ChatGPT into your browsing experience. Users can highlight text, hover over 
+                a dot, and get an AI-generated response explaining that text. Users can then ask to get examples, summarize, or ask follow
+                up questions about the text.
+            </p>
+            <img src="http://drive.google.com/uc?export=view&id=1xS96y5He_tPKpHDKSaZlk0X9pA4ia-3M" alt="">
+            <p class="fittracker-caption">
+                A gif showing how Quill can be used.
+            </p>
+            <p>       
+                We created Quill using Javascript, HTML, and CSS. Chrome extensions require a service worker to handle the back-end, and 
+                a manifest to describe the specs and requirements of the project. Besides those things, the rest was just a lot of Javascript
+                logic, dealing with the ChatGPT API, and styling everything with HTML and CSS. 
+            </p>
+            <p>
+                You can download Quill for yourself 
+                <a class="pdf-link" target="_blank" href="https://chrome.google.com/webstore/detail/quill-ai-search-on-any-we/pnfjielbdnigpjpphkendbjacfgegibm?hl=en">here</a>. 
+                In around a month of advertising, we garnered over 300 users!
+            </p>
+        </div>
+        
+        
+        <!-- Footer -->
+        <footer class="footer">
+            <!-- replace with your own email address -->
+            <a href="mailto:niklbrandis@gmail.com" class="footer__link">niklbrandis@gmail.com</a>
+            <ul class="social-list">
+                <li class="social-list__item">
+                    <a class="social-list__link" href="https://www.linkedin.com/in/nick-brandis-74518a1b9/" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </li>
+                <li class="social-list__item">
+                    <a class="social-list__link" href="https://github.com/nbrandis22" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </li>
+                <li class="social-list__item">
+                    <a class="social-list__link" href="https://www.youtube.com/channel/UClvTBnLSkwy5pjo7S76ep8g" target="_blank">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </li>
+            </ul>
+        </footer>
+        
+        
+        <script src="js/index.js"></script>
+        
+    </body>
+</html>
