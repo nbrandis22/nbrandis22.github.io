@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrl: './nav-bar.component.css'
 })
 export class NavBarComponent {
-
+  engineeringPages = [
+    { name: 'Digital Audio Visualizer', link: '/dav'}, 
+    { name: 'Allegro', link: '/allegro'}, 
+    { name: 'FRED', link: '/fred' },
+  ]
 }

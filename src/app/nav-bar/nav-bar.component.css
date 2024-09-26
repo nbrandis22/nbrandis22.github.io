@@ -33,6 +33,16 @@ a:hover {
   margin-left: 20px;
 }
 
+.dropdown:hover .dropdown-menu {
+  display: block;
+  margin-top: 0;
+  background-color: dimgray;
+}
+
+.dropdown-item {
+  color: #dadada;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .header__nav-header {

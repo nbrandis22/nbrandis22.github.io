@@ -2,12 +2,32 @@
   <div class="header__nav-header">
     <a class="header__title" [routerLink]="['']">Nick Brandis</a>
     <nav aria-label="Main Navigation">
-        <ul class="header__nav-items">
-            <a class="header__nav-item" [routerLink]="['/engineering']">Engineering</a>
-            <a class="header__nav-item" [routerLink]="['/music']">Music</a>
-            <a class="header__nav-item" [routerLink]="['/engineering']">About</a>
-            <a class="header__nav-item" [routerLink]="['/engineering']">Contact</a>
-        </ul>
+      <ul class="header__nav-items">
+        <li class="header__nav-item nav-link dropdown">
+          <a
+            class="header__nav-item nav-link dropdown-toggle"
+            id="engineeringDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+            [routerLink]="['/engineering']"
+            >Engineering</a
+          >
+          <!-- Dropdown menu listing the pages -->
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <li *ngFor="let page of engineeringPages">
+              <!-- Use routerLink to navigate to pages within your Angular app -->
+              <a class="dropdown-item" [routerLink]="page.link">{{
+                page.name
+              }}</a>
+            </li>
+          </ul>
+        </li>
+        <a class="header__nav-item" [routerLink]="['/music']">Music</a>
+        <a class="header__nav-item" [routerLink]="['/engineering']">About</a>
+        <a class="header__nav-item" [routerLink]="['/engineering']">Contact</a>
+      </ul>
     </nav>
   </div>
 </header>

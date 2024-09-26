@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { provideRouter, RouterLink } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
+import { NgFor }  from '@angular/common';
 
 import { AppComponent } from './app.component';
 import { routes } from './app.routes';
@@ -13,7 +14,7 @@ import { PagesModule } from './pages/pages.module';
 @NgModule({
     declarations: [AppComponent, NavBarComponent, FooterComponent],
     bootstrap: [AppComponent],
-    imports: [BrowserModule, RouterOutlet, RouterLink, FontAwesomeModule, PagesModule],
+    imports: [BrowserModule, RouterOutlet, RouterLink, FontAwesomeModule, PagesModule, NgFor ],
     providers: [provideRouter(routes)],
 })
 export class AppModule {
