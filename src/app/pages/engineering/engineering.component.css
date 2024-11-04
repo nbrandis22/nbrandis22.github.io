@@ -1,0 +1,12 @@
+.engineering {
+    justify-content: center;
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-top: 5%;
+    font-size: larger;
+  }
+  
+  p {
+    padding-bottom: 15px;
+    padding-top: 15px;
+  }

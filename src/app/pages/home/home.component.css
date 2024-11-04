@@ -1,4 +1,23 @@
 .home {
-    padding: 3%;
-    justify-content: center;
+  justify-content: center;
+  padding-left: 15%;
+  padding-right: 15%;
+  padding-top: 5%;
+  font-size: larger;
+}
+
+p {
+  padding-bottom: 15px;
+  padding-top: 15px;
+}
+
+.img-wrapper {
+  display: flex;
+  justify-content: center;
+  padding-top: 5%;
+  padding-bottom: 7%;
+}
+
+.quill-image {
+  max-width: 80%;
 }

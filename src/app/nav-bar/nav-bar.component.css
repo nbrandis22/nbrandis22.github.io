@@ -9,7 +9,7 @@
 }
 
 .header__title {
-  font-size: 25px;
+  font-size: 30px;
   margin: 0;
 }
 
@@ -31,6 +31,7 @@ a:hover {
 
 .header__nav-item {
   margin-left: 20px;
+  font-size: 20px;
 }
 
 .dropdown:hover .dropdown-menu {

@@ -1,0 +1,29 @@
+.top {
+  padding-left: 15%;
+  padding-right: 15%;
+  padding-top: 5%;
+  font-size: larger;
+}
+
+h2 {
+  padding-bottom: 30px;
+}
+
+p {
+  padding-bottom: 15px;
+  padding-top: 15px;
+}
+
+.video-wrap {
+  width: 100%; /* Or set a fixed width */
+  height: 600px; /* Desired height */
+  position: relative;
+  padding-top: 5%;
+  padding-bottom: 7%;
+}
+
+.video {
+  width: 100%;
+  height: 100%;
+  border: none; /* To remove default iframe border */
+}

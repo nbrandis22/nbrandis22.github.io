@@ -1,0 +1,10 @@
+<div class="top">
+  <h2>Allegro Speaker</h2>
+  <div *ngFor="let section of htmlSections">
+    <p *ngIf="section.type === 'paragraph'">{{ section.text }}</p>
+    <div class="video-wrap" *ngIf="section.type === 'video'">
+      <iframe class="video" [src]="getVideoUrl(section.url)"></iframe>
+    </div>
+  </div>
+  <p>&nbsp;</p>
+</div>

@@ -1,15 +1,10 @@
-<div class="home">
-  <h1>Welcome!</h1>
+<div class="top">
+  <h2>Quill</h2>
   <div *ngFor="let section of htmlSections">
     <p *ngIf="section.type === 'paragraph'">{{ section.text }}</p>
     <div *ngIf="section.type === 'img'" class="img-wrapper">
-      <img [src]="section.url" alt="Picture of me" class="home-image">
+      <img [src]="section.url" alt="Quill Image" class="quill-image">
     </div>
   </div>
-  <p>&nbsp;</p>
-  <p>&nbsp;</p>
-  <p>&nbsp;</p>
-  <p>&nbsp;</p>
-  <p>&nbsp;</p>
   <p>&nbsp;</p>
 </div>
