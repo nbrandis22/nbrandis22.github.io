@@ -1,1 +1,11 @@
-<p>fred works!</p>
+<div class="top">
+  <h2>Friendly Embedded Real-Time Dino (FRED)</h2>
+  <div *ngFor="let section of htmlSections">
+    <p *ngIf="section.type === 'paragraph'">{{ section.text }}</p>
+    <div class="video-wrap" *ngIf="section.type === 'video'">
+      <iframe class="video" [src]="getVideoUrl(section.url)"></iframe>
+    </div>
+    <iframe src="assets\capstone_report.pdf" width="100%" height="500px"></iframe>
+  </div>
+  <p>&nbsp;</p>
+</div>
