@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { DomSanitizer } from '@angular/platform-browser';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-about',
@@ -15,8 +16,10 @@ export class AboutComponent implements OnInit {
     private sanitizer: DomSanitizer
   ) {}
 
+  private aboutUrl = environment.apiUrl + 'about';
+
   ngOnInit(): void {
-    this.httpClient.get('http://localhost:3000/about').subscribe(
+    this.httpClient.get(this.aboutUrl).subscribe(
       (response: any) => {
         this.htmlSections = response.sections;
       },

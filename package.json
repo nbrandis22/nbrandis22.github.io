@@ -3,8 +3,10 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
+    "dev": "ng serve",
+    "prod": "ng serve --configuration production",
+    "build": "ng build --configuration production --base-href \"https://nbrandis22/nbrandis22.github.io\"",
+    "deploy": "npx angular-cli-ghpages --dir=dist/personal-portfolio",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },

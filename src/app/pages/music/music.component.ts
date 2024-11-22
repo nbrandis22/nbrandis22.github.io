@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { DomSanitizer } from '@angular/platform-browser';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-music',
@@ -15,8 +16,10 @@ export class MusicComponent implements OnInit {
     private sanitizer: DomSanitizer
   ) {}
 
+  private musicUrl = environment.apiUrl + 'music';
+
   ngOnInit(): void {
-    this.httpClient.get('http://localhost:3000/music').subscribe(
+    this.httpClient.get(this.musicUrl).subscribe(
       (response: any) => {
         this.htmlSections = response.sections;
       },

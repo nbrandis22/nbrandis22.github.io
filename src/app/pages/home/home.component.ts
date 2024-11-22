@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { DomSanitizer } from '@angular/platform-browser';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-home',
@@ -15,8 +16,10 @@ export class HomeComponent implements OnInit {
     private sanitizer: DomSanitizer
   ) {}
 
+  private homeUrl = environment.apiUrl + 'home';
+
   ngOnInit(): void {
-    this.httpClient.get('http://localhost:3000/home').subscribe(
+    this.httpClient.get(this.homeUrl).subscribe(
       (response: any) => {
         this.htmlSections = response.sections;
       },

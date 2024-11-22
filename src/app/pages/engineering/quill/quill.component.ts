@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NgIf, NgFor } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { DomSanitizer } from '@angular/platform-browser';
+import { environment } from '../../../../environments/environment';
 
 @Component({
   selector: 'app-quill',
@@ -18,8 +19,10 @@ export class QuillComponent implements OnInit {
     private sanitizer: DomSanitizer
   ) {}
 
+  private quillUrl = environment.apiUrl + 'quill';
+
   ngOnInit(): void {
-    this.httpClient.get('http://localhost:3000/quill').subscribe(
+    this.httpClient.get(this.quillUrl).subscribe(
       (response: any) => {
         this.htmlSections = response.sections;
       },
