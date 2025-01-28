@@ -5,8 +5,8 @@
     "ng": "ng",
     "dev": "ng serve",
     "prod": "ng serve --configuration production",
-    "build": "ng build --configuration production --base-href \"https://nbrandis22/nbrandis22.github.io\"",
-    "deploy": "npx angular-cli-ghpages --dir=dist/personal-portfolio",
+    "build": "ng build --configuration production",
+    "deploy": "npx angular-cli-ghpages --dir=dist/personal-portfolio/browser",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
