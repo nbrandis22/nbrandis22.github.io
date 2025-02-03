@@ -1,9 +1,11 @@
 <div class="home">
-  <h1>Welcome!</h1>
-  <div *ngFor="let section of htmlSections">
-    <p *ngIf="section.type === 'paragraph'">{{ section.text }}</p>
-    <div *ngIf="section.type === 'img'" class="img-wrapper">
-      <img [src]="section.url" alt="Picture of me" class="home-image">
+  <div class="home-section">
+    <div *ngFor="let section of htmlSections" [attr.id]="'section-' + section.type">
+      <img *ngIf="section.type === 'img'" [src]="section.url" alt="Picture of me" class="home-image">
+      <div *ngIf="section.type === 'text'" class="home-text">
+        <h1>{{ section.title }}</h1>
+        <p>{{ section.text }}</p>
+      </div>
     </div>
   </div>
   <p>&nbsp;</p>
