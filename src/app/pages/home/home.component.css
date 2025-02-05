@@ -9,9 +9,13 @@
 .home-section {
   display: flex;
   align-items: center;
+  padding-bottom: 20%;
 }
 
 #section-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 30%;
 }
 
@@ -20,15 +24,14 @@
 }
 
 .home-text {
-  padding-left: 10%;
+  max-width: 85%;
 }
 
 .home-image {
-  max-width: 100%;
+  max-width: 60%;
   height: auto;
 }
 
 p {
-  padding-bottom: 15px;
-  padding-top: 15px;
+  padding-top: 1%;
 }
