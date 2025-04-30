@@ -20,18 +20,18 @@
   text-align: center;
   padding: 1.5em 0;
   font-size: 1.25rem;
-  height: 2%; /* Adjust height as needed */
-  width: 50%; /* Full width */
+  height: 2%;
+  width: 50%;
   left: 0;
   right: 0;
   margin: 0 auto;
   border-top-left-radius: 200% 400%; /* Creates the top-left elliptical shape */
   border-top-right-radius: 200% 400%; /* Creates the top-right elliptical shape */
-  padding-top: 3%; /* Space at the top for content */
-  overflow: hidden; /* Hide anything overflowing the shape */
+  padding-top: 3%;
+  overflow: hidden;
   background: linear-gradient(270deg, #6a0fad, #007bff, #40e0d0, #8a2be2);
   background-size: 400% 400%;
-  animation: gradientAnimation 40s linear infinite; /* Animate the gradient */
+  animation: gradientAnimation 40s linear infinite;
 }
 
 .footer a {
@@ -66,12 +66,12 @@
 
 @media (max-width: 768px) {
   .footer {
-    position: absolute; /* Change to absolute if necessary */
-    height: auto; /* Allow height to adjust */
-    padding: 1em 0; /* Adjust padding for mobile */
+    position: absolute;
+    height: auto;
+    padding: 1em 0;
     font-size: 1rem; /* Smaller font size for mobile */
-    width: 100%; /* Use full width */
-    left: 0; /* Align to the left */
-    transform: none; /* Remove translate for mobile */
+    width: 100%;
+    left: 0;
+    transform: none;
   }
 }

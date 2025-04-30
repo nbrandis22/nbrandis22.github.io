@@ -3,7 +3,9 @@
   <div *ngFor="let section of htmlSections">
     <p *ngIf="section.type === 'paragraph'">{{ section.text }}</p>
     <div *ngIf="section.type === 'img'" class="img-wrapper">
-      <img [src]="section.url" alt="Quill Image" class="quill-image">
+      <div class="crop-container">
+        <img [src]="section.url" alt="Quill Image" class="quill-image">
+      </div>
     </div>
   </div>
   <p>&nbsp;</p>

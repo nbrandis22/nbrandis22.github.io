@@ -21,6 +21,14 @@ h2 {
     padding-bottom: 7%;
 }
 
+.crop-container {
+  width: 80%;
+  overflow: hidden;
+  border-radius: 50px;
+}
+
 .quill-image {
-    max-width: 80%;
+  width: calc(100% + 60px); /* Add 60px to compensate for 30px crop on each side */
+  margin-left: -30px;
+  margin-right: -30px;
 }
