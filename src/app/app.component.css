@@ -1,7 +1,14 @@
 .main {
     flex-grow: 1;
+    margin-top: 80px;
 }
 
 .app-footer {
     z-index: -100;
+}
+
+@media (max-width: 768px) {
+  .main {
+    margin-top: 255px;
+  }
 }
